@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="AppName">Gapira</string>
-    <string name="AppNameBeta">Gapira Beta</string>
+    <string name="AppName">گپیرا</string>
+    <string name="AppNameBeta">گپیرا بتا</string>
     <string name="LanguageName">English</string>
     <string name="English">English</string>
     <string name="LanguageNameInEnglish">English</string>

@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:installLocation="auto">
 
-    <application android:name="org.telegram.messenger.ApplicationLoaderImpl" tools:replace="name">
+    <application android:icon="@mipmap/ic_launcher" android:roundIcon="@mipmap/ic_launcher_round" android:name="org.telegram.messenger.ApplicationLoaderImpl" tools:replace="name">
         <service
             android:name="org.telegram.messenger.GoogleVoiceClientService"
             android:exported="true"
