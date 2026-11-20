@@ -2002,7 +2002,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
         private ImageView chevronRight;
         private int chevronRightFilterColor, chevronRightSelectorColor;
         private CheckBoxCell syncContactsBox;
-        private CheckBoxCell testBackendCheckBox;
 
         @CountryState
         private int countryState = COUNTRY_STATE_NOT_SET_OR_VALID;
@@ -2511,28 +2510,6 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 });
             }
 
-            final boolean allowTestBackend = (BuildVars.DEBUG_VERSION || TEST_BACKEND_IN_STORE && !BuildConfig.BUNDLE) || getConnectionsManager().isTestBackend();
-            if (allowTestBackend && activityMode == MODE_LOGIN) {
-                testBackendCheckBox = new CheckBoxCell(context, 2);
-                testBackendCheckBox.setText(getString(R.string.DebugTestBackend), "", testBackend = getConnectionsManager().isTestBackend(), false);
-                addView(testBackendCheckBox, LayoutHelper.createLinear(LayoutHelper.WRAP_CONTENT, LayoutHelper.MATCH_PARENT, Gravity.LEFT | Gravity.TOP, 16, 0, 16 + (LocaleController.isRTL && AndroidUtilities.isSmallScreen() ? 56 : 0), 0));
-                bottomMargin -= 24;
-                testBackendCheckBox.setOnClickListener(v -> {
-                    if (getParentActivity() == null) {
-                        return;
-                    }
-                    CheckBoxCell cell = (CheckBoxCell) v;
-                    testBackend = !testBackend;
-                    cell.setChecked(testBackend, true);
-
-                    boolean testBackend = allowTestBackend && getConnectionsManager().isTestBackend();
-                    if (testBackend != LoginActivity.this.testBackend) {
-                        getConnectionsManager().switchBackend(false);
-                    }
-                    loadCountries();
-                });
-            }
-
             if (bottomMargin > 0 && !AndroidUtilities.isSmallScreen()) {
                 Space bottomSpacer = new Space(context);
                 bottomSpacer.setMinimumHeight(AndroidUtilities.dp(bottomMargin));
@@ -2733,10 +2710,7 @@ public class LoginActivity extends BaseFragment implements NotificationCenter.No
                 syncContactsBox.setSquareCheckBoxColor(Theme.key_checkboxSquareUnchecked, Theme.key_checkboxSquareBackground, Theme.key_checkboxSquareCheck);
                 syncContactsBox.updateTextColor();
             }
-            if (testBackendCheckBox != null) {
-                testBackendCheckBox.setSquareCheckBoxColor(Theme.key_checkboxSquareUnchecked, Theme.key_checkboxSquareBackground, Theme.key_checkboxSquareCheck);
-                testBackendCheckBox.updateTextColor();
-            }
+
 
             phoneOutlineView.updateColor();
             countryOutlineView.updateColor();
