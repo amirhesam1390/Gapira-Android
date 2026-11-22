@@ -73,7 +73,6 @@ android {
             debuggable true
             jniDebuggable true
             signingConfig signingConfigs.debug
-            applicationId "org.telegram.messenger.beta"
             minifyEnabled false
             shrinkResources false
             multiDexEnabled true
@@ -85,7 +84,6 @@ android {
             debuggable false
             jniDebuggable false
             signingConfig signingConfigs.release
-            applicationId "org.telegram.messenger.web"
             minifyEnabled true
             shrinkResources true
             multiDexEnabled true
