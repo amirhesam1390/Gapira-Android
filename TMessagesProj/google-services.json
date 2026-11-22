@@ -1,97 +1,46 @@
 {
   "project_info": {
-    "project_number": "760348033671",
-    "firebase_url": "https://tmessages2.firebaseio.com",
-    "project_id": "tmessages2",
-    "storage_bucket": "tmessages2.appspot.com"
+    "project_number": "357344398607",
+    "firebase_url": "https://myapp-18150-default-rtdb.firebaseio.com",
+    "project_id": "myapp-18150",
+    "storage_bucket": "myapp-18150.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:760348033671:android:f6afd7b67eae3860",
-        "android_client_info": {
-          "package_name": "org.telegram.messenger"
-        }
+        "mobilesdk_app_id": "1:357344398607:android:4d837315513fb73437c27a",
+        "android_client_info": {"package_name": "com.ghgh"}
       },
-      "oauth_client": [
-        {
-          "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA-t0jLPjUt2FxrA8VPK2EiYHcYcboIR6k"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
+      "oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}],
+      "api_key": [{"current_key": "AIzaSyDhU_GVFhdIE6DWyPam5DocTmsiib5EJM0"}],
+      "services": {"appinvite_service": {"other_platform_oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}]}}
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:760348033671:android:dc022572c167a16c",
-        "android_client_info": {
-          "package_name": "org.telegram.messenger.beta"
-        }
+        "mobilesdk_app_id": "1:357344398607:android:098e10bd361bf0f437c27a",
+        "android_client_info": {"package_name": "com.my.newproject67"}
       },
-      "oauth_client": [
-        {
-          "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA-t0jLPjUt2FxrA8VPK2EiYHcYcboIR6k"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
+      "oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}],
+      "api_key": [{"current_key": "AIzaSyDhU_GVFhdIE6DWyPam5DocTmsiib5EJM0"}],
+      "services": {"appinvite_service": {"other_platform_oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}]}}
     },
     {
       "client_info": {
-        "mobilesdk_app_id": "1:760348033671:android:7396e651423888c3f66e22",
-        "android_client_info": {
-          "package_name": "org.telegram.messenger.web"
-        }
+        "mobilesdk_app_id": "1:357344398607:android:ce1dc532159b9c8b37c27a",
+        "android_client_info": {"package_name": "ir.gapira.android"}
       },
-      "oauth_client": [
-        {
-          "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-          "client_type": 3
-        }
-      ],
-      "api_key": [
-        {
-          "current_key": "AIzaSyA-t0jLPjUt2FxrA8VPK2EiYHcYcboIR6k"
-        }
-      ],
-      "services": {
-        "appinvite_service": {
-          "other_platform_oauth_client": [
-            {
-              "client_id": "760348033671-2hh8ebmuflsnjoc0kldkfells9rhtfni.apps.googleusercontent.com",
-              "client_type": 3
-            }
-          ]
-        }
-      }
+      "oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}],
+      "api_key": [{"current_key": "AIzaSyDhU_GVFhdIE6DWyPam5DocTmsiib5EJM0"}],
+      "services": {"appinvite_service": {"other_platform_oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}]}}
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:357344398607:android:7acaf1df5f23ac4137c27a",
+        "android_client_info": {"package_name": "ir.novaplus"}
+      },
+      "oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}],
+      "api_key": [{"current_key": "AIzaSyDhU_GVFhdIE6DWyPam5DocTmsiib5EJM0"}],
+      "services": {"appinvite_service": {"other_platform_oauth_client": [{"client_id": "357344398607-rmhjgvbk1tqsck5bv0hf7r3o2o7ivgoa.apps.googleusercontent.com", "client_type": 3}]}}
     }
   ],
   "configuration_version": "1"
