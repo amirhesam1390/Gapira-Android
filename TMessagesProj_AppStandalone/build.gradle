@@ -27,7 +27,7 @@ android {
     compileSdkVersion 36
     buildToolsVersion '36.0.0'
 
-    defaultConfig.applicationId = "org.telegram.messenger.web"
+    defaultConfig.applicationId = "ir.gapira.android.web"
 
 
     lintOptions {
@@ -154,7 +154,7 @@ android {
     buildFeatures {
         buildConfig = true
     }
-    namespace 'org.telegram.messenger.web'
+    namespace 'ir.gapira.android.web'
 
     lintOptions {
         checkReleaseBuilds false
