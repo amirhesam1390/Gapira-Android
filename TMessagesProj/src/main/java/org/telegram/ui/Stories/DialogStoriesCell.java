@@ -328,18 +328,22 @@ public class DialogStoriesCell extends FrameLayout implements NotificationCenter
         titleView.setTextColor(getTextLogoColor());
         titleView.setTypeface(AndroidUtilities.bold());
         titleView.setPadding(0, dp(8), 0, dp(8));
-        titleView.setTextSize(dp(!AndroidUtilities.isTablet() && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? 22 : 26));
+        titleView.setTextSize(dp(!AndroidUtilities.isTablet() && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? 18 : 20));
         titleView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
         titleView.setFocusableInTouchMode(true);
         addView(titleView, LayoutHelper.createFrame(LayoutHelper.MATCH_PARENT, LayoutHelper.WRAP_CONTENT));
 
         gapiraLogoView = new ImageView(context);
         gapiraLogoView.setContentDescription("گپیرا");
-        gapiraLogoView.setScaleType(ImageView.ScaleType.CENTER_INSIDE);
+        gapiraLogoView.setScaleType(ImageView.ScaleType.FIT_CENTER);
         gapiraLogoView.setImageResource(R.drawable.gapira_story_logo);
         gapiraLogoView.setColorFilter(getTextLogoColor(), PorterDuff.Mode.MULTIPLY);
         gapiraLogoView.setImportantForAccessibility(View.IMPORTANT_FOR_ACCESSIBILITY_YES);
         gapiraLogoView.setFocusableInTouchMode(true);
+        gapiraLogoView.setScaleX(1f);
+        gapiraLogoView.setScaleY(1f);
+        gapiraLogoView.setPivotX(0f);
+        gapiraLogoView.setPivotY(0f);
         addView(gapiraLogoView, LayoutHelper.createFrame(90, 22));
 
         statusDrawable = new AnimatedEmojiDrawable.SwapAnimatedEmojiDrawable(null, dp(26));
@@ -943,6 +947,10 @@ public class DialogStoriesCell extends FrameLayout implements NotificationCenter
             titleView.setTranslationX(lastViewRight);
             titleView.getDrawable().setRightPadding(lastViewRight - dp(12) + actionBar.menu.getVisibleItemsMeasuredWidthWithAlpha() * progress);
 
+                    gapiraLogoView.setPivotX(0f);
+                    gapiraLogoView.setPivotY(0f);
+            gapiraLogoView.setPivotX(0f);
+            gapiraLogoView.setPivotY(0f);
             gapiraLogoView.setTranslationX(titleView.getTranslationX() + dp(1));
             gapiraLogoView.setTranslationY(bottomY - barOffset + dp(14 + FAKE_TOP_PADDING + 4.333f) + translationOffset /*titleView.getTranslationY() + dpf2(37.33f)*/);
 
@@ -1012,7 +1020,7 @@ public class DialogStoriesCell extends FrameLayout implements NotificationCenter
 
     @Override
     protected void onMeasure(int widthMeasureSpec, int heightMeasureSpec) {
-        titleView.setTextSize(dp(!AndroidUtilities.isTablet() && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? 22 : 26));
+        titleView.setTextSize(dp(!AndroidUtilities.isTablet() && getResources().getConfiguration().orientation == Configuration.ORIENTATION_LANDSCAPE ? 18 : 20));
         currentCellWidth = dp(ITEM_WIDTH);
         AndroidUtilities.rectTmp.set(0, 0, getMeasuredWidth(), getMeasuredHeight());
         super.onMeasure(widthMeasureSpec, MeasureSpec.makeMeasureSpec(dp(85 + FAKE_TOP_PADDING), MeasureSpec.EXACTLY));
