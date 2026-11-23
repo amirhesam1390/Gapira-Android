@@ -323,8 +323,9 @@ public class MainTabsActivity extends ViewPagerActivity implements NotificationC
 
         tabsView = new MainTabsLayout(context, resourceProvider);
         tabsView.setClipChildren(false);
-        tabsView.setPadding(dp(DialogsActivity.MAIN_TABS_MARGIN + 4), dp(DialogsActivity.MAIN_TABS_MARGIN + 4), dp(DialogsActivity.MAIN_TABS_MARGIN + 4), dp(DialogsActivity.MAIN_TABS_MARGIN + 4));
-        tabsView.setMaxWidth(dp(328 + DialogsActivity.MAIN_TABS_MARGIN * 2));
+        tabsView.setElevation(dp(12));
+        tabsView.setPadding(dp(DialogsActivity.MAIN_TABS_MARGIN + 6), dp(DialogsActivity.MAIN_TABS_MARGIN + 6), dp(DialogsActivity.MAIN_TABS_MARGIN + 6), dp(DialogsActivity.MAIN_TABS_MARGIN + 6));
+        tabsView.setMaxWidth(dp(360 + DialogsActivity.MAIN_TABS_MARGIN * 2));
 
         tabs = new GlassTabView[5];
         tabs[INDEX_CHATS] = GlassTabView.createMainTab(context, resourceProvider, GlassTabView.TabAnimation.CHATS, R.string.MainTabsChats);
