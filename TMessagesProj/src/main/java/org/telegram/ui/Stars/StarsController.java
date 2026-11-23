@@ -1311,7 +1311,12 @@ public class StarsController {
         ) : form.bot_id;
         final String bot;
         final boolean isBot, isBiz;
-        if (dialogId >= 0) {
+        if (dialogId == 0) {
+            // Self Premium invoice has no bot or chat peer.
+            bot = "";
+            isBot = false;
+            isBiz = false;
+        } else if (dialogId > 0) {
             TLRPC.User user = MessagesController.getInstance(currentAccount).getUser(dialogId);
             bot = UserObject.getUserName(user);
             isBot = UserObject.isBot(user);
@@ -1508,7 +1513,10 @@ public class StarsController {
             dialogId = form.bot_id;
         }
         final String bot;
-        if (dialogId >= 0) {
+        if (dialogId == 0) {
+            // Self Premium payment does not belong to a bot dialog.
+            bot = "";
+        } else if (dialogId > 0) {
             bot = UserObject.getUserName(MessagesController.getInstance(currentAccount).getUser(dialogId));
         } else {
             TLRPC.Chat chat = MessagesController.getInstance(currentAccount).getChat(-dialogId);
