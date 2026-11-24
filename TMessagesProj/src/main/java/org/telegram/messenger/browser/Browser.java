@@ -366,6 +366,25 @@ public class Browser {
         if (context == null || uri == null) {
             return;
         }
+
+        String gapiraHost = uri.getHost();
+        if ("gapira.ir".equalsIgnoreCase(gapiraHost)
+                || "www.gapira.ir".equalsIgnoreCase(gapiraHost)) {
+            try {
+                android.content.Intent gapiraIntent =
+                        new android.content.Intent(context, org.telegram.ui.LaunchActivity.class);
+                gapiraIntent.setAction(android.content.Intent.ACTION_VIEW);
+                gapiraIntent.setData(uri);
+                gapiraIntent.addFlags(android.content.Intent.FLAG_ACTIVITY_NEW_TASK
+                        | android.content.Intent.FLAG_ACTIVITY_CLEAR_TOP
+                        | android.content.Intent.FLAG_ACTIVITY_SINGLE_TOP);
+                context.startActivity(gapiraIntent);
+            } catch (Exception e) {
+                FileLog.e(e);
+            }
+            return;
+        }
+
         if (!keepWebAuthTokens) {
             uri = withoutWebAuthTokens(uri);
         }
